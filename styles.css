@@ -1,0 +1,154 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --Darkcyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Verydarkblue: hsl(212, 21%, 14%);
+  --Darkgrayishblue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+  --Gunmetal: hsl(212, 21%, 14%);
+  --AurometalSaurus: hsla(228, 12%, 48%, 1);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Cream);
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  height: 450px;
+  border-radius: 10px 0 0 10px;
+}
+
+.card {
+  display: flex;
+  max-width: 600px;
+  height: 450px;
+  border-radius: 10px;
+}
+
+.image {
+  height: 450px;
+  width: 50%;
+  border-radius: 10px 0 0 10px;
+  background-image: url(./images/image-product-desktop.jpg);
+  background-position: center;
+  background-size: contain;
+}
+
+.info {
+  background-color: var(--White);
+  padding: 0 31.5px 31.5px;
+  width: 50%;
+  border-radius: 0 10px 10px 0;
+}
+
+.info .perfume {
+  font-weight: 500;
+  font-size: 12px;
+  margin-top: 31px;
+  color: var(--Darkgrayishblue);
+  letter-spacing: 5px;
+}
+
+.info .title {
+  margin-top: 20px;
+  font-family: 'Fraunces';
+  font-size: 32px;
+  color: var(--Gunmetal);
+}
+
+.info .text {
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--AurometalSaurus);
+}
+
+.info .price {
+  margin-top: 10px;
+  font-family: 'Fraunces';
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  color: var(--Darkcyan);
+}
+
+span {
+  font-size: 13px;
+  font-family: 'Montserrat';
+  text-decoration: line-through;
+  color: var(--AurometalSaurus);
+  margin-left: 19px;
+}
+
+button {
+  margin-top: 19px;
+  width: 100%;
+  height: 48px;
+  background-color: var(--Darkcyan);
+  color: var(--White);
+  border-radius: 8px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: hsla(157, 43%, 18%, 1);
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    flex-direction: column;
+    max-width: 340px;
+    height: 100%;
+  }
+
+  .image {
+    width: 100%;
+    height: 240px;
+    background-image: url(./images/image-product-mobile.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px 10px 0 0;
+    margin-top: 30px;
+  }
+
+  .info {
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+  }
+}
